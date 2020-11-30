@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+	<body>
+			
+			<button onclick="buttonClick()">Нажми, чтобы поменять текст</button>
+			<input type="text" id="input" value="Работа с HTML">
+			<p>
+			<button onclick="buttonClick1()">Нажми, чтобы поменять картинку</button>
+			<img id="foto" src="https://www.sunhome.ru/i/wallpapers/244/vozvraschenie-navsegda.orig.jpg" style="width: 500px; height: 250px;" >
+			</p>
+			<script>
+			function buttonClick() {
+			var input = document.getElementById('input');
+			input.value = 'Работа с JavaScript';
+			}
+			</script>
+			<script >
+			function buttonClick1() {
+			var img = document.getElementById('foto');
+			img.src = 'https://wallbox.ru/resize/1600x900/wallpapers/main2/201815/15235302205acf39eceec118.26523911.jpg';
+			}
+			</script>
+	</body>
+</html>
