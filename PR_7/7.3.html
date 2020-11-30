@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+	<body>
+			<input type="text" value="Изменить текст" onfocus="go(this)">
+			<br>
+			<input type="submit" onclick="block(this)" value="Нажми, чтобы изменить текст" id="block">
+			<br>
+			<input type="submit" onclick="unblock('button')" value="Разблокировать" style="display: none;" id="unblock">
+			<br>
+			<input type="submit" onclick="num(this)" value="0">
+			<script>
+			function go(elem){
+			elem.value = 'Текст изменен';
+			}
+			
+			function block(){
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'Заблокировано';
+			block.disabled = true;
+			unblock.style.display = 'block';
+			}
+			
+			function unblock(){
+			var block = document.getElementById('block');
+			var unblock = document.getElementById('unblock');
+			block.value = 'Разблокировано';
+			block.disabled = false;
+			unblock.style.display = 'none';
+			}
+			
+			function num(elem){
+			elem.value = parseInt(elem.value) + 1;
+			}
+			</script>
+	</body>
+</html>
