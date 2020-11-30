@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+	<body>
+	<input type="text" value="Черный" style="width: 100px" id = "input">
+		<br>
+		<br>
+			<button onclick="buttonClick()">Другой цвет</button>
+			<script>
+			function buttonClick(elem){
+			var elem = document.getElementById('input');
+			elem.value = 'Синий';
+			elem.style.width = '50px';
+			elem.style.height = '50px';
+			elem.style.color = 'blue';
+			elem.style.borderRadius = '15px';
+			}
+			</script>
+			<br>
+			<br>
+			<input type="text" value="Текст" style="width: 100px" id = "input1">
+		<br>
+		<br>
+			<button onclick="button1Click()">Убрать</button>
+			<button onclick="button2Click()">Вернуть</button>
+			<script>
+			function button1Click(elem){
+			var elem = document.getElementById('input1');
+			elem.style.display = 'none';
+			}
+
+			function button2Click(elem){
+			var elem = document.getElementById('input1');
+			elem.style.display = 'inline';
+			}
+			</script>
+	</body>
+</html>
