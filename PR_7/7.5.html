@@ -44,9 +44,9 @@ document.getElementById('Out').addEventListener('click', out);
 	<p id="test1"><a href="https://www.google.ru/">ссылка 1</a><br>
   <a href="https://www.tut.by/">ссылка 2</a><br>
    <a href="https://yandex.ru/">ссылка 3</a></p>
-<button onclick="func()">Нажмите на меня!</button>
+<button onclick="func2()">Нажмите на меня!</button>
 <script>
-function func(){
+function func2(){
 	var elem=document.getElementById('test1');
 	elem.innerHTML='<p id="test1"><a href="https://www.google.ru/">ссылка 1(http://google.ru)</a><br> <a href="https://www.tut.by/">ссылка 2(http://tut.by)</a><br><a href="https://yandex.ru/">ссылка 3(http://yandex.ru)</a>';
 }
