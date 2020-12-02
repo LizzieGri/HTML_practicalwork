@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="wrapper">
+<p id="test">
+0
+</p>
+<input type="submit" value="Нажмите на меня!"  onclick="go()">
+</div>
+<script>
+function go(){
+window.setInterval(timer, 1000);
+}
+function timer(){
+var test = document.getElementById('test');
+test.innerHTML = parseInt(test.innerHTML)+1;
+}</script>
+</body>
+</html>
