@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<p>Станет курсивом</p>
+<p>Не изменится</p>
+<p>Станет больше</p>
+<input type="submit" onclick="func()">
+<script>
+function func(){
+	var elems=document.getElementsByTagName('p');
+
+	elems[0].innerHTML='<i>Станет курсивом</i>';
+	elems[1].innerHTML='Не изменится';
+	elems[2].innerHTML='<h2>Станет больше<h2>';
+}
+</script>
+<br>
+<br>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<div>Абзац с текстом</div>
+<br>
+<button onclick="func1()">Нажмите на меня!</button>
+<script>
+function func1(){
+	var elems1=document.getElementsByTagName('div');
+	for(var i =0; i <elems1.length; i++){
+		elems1[i].innerHTML=i + '. Абзац с текстом';
+	}
+}
+</script>
+</body>
+</html>
