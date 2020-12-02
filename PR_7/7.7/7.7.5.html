@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+	<div id="wrapper">
+		<img src="http://houseprint.md/wp-content/uploads/2018/06/butterfly-113.jpg" id="img1">
+		<img src="http://masteroe.com/images/features/talent-icon.png" id="img2">
+		<img src="https://sun9-35.userapi.com/c9765/u77060655/a_7fcd9b1c.jpg?ava=1" id="img3">
+		<img src="https://im0-tub-ru.yandex.net/i?id=1d570f899cdc7bae82b502a11391844d&ref=rim&n=33&w=188&h=188" id="img4">
+		<img src="https://i.pinimg.com/474x/63/d1/32/63d132b8e005776eee8e6932afe0614b.jpg?nii=t" id="img5">
+		<p>
+			<input type="submit" value="Запустить карусель!" onclick="go()" id="go">
+			<input type="submit" value="Остановить карусель!" onclick="stop()" id="stop" disabled>
+		</p>
+	</div>
+		<script>
+		function go(){
+			window.timerId = window.setInterval(timer, 1000);
+			document.getElementById('go').disabled = true;
+		} 
+		function go(){
+			window.timerId = window.setInterval(timer, 1000);
+			document.getElementById('go').disabled = true;
+			document.getElementById('stop').disabled = false;
+		}
+		function stop(){
+			window.clearInterval(window.timerId);
+			document.getElementById('go').disabled = false;
+			document.getElementById('stop').disabled = true;
+		}
+		function timer(){
+			var img1 = document.getElementById('img1');
+			var img2 = document.getElementById('img2');
+			var img3 = document.getElementById('img3');
+			var img4 = document.getElementById('img4');
+			var img5 = document.getElementById('img5');
+			var tmp = img1.src;
+			img1.src = img2.src;
+			img2.src = img3.src;
+			img3.src = img4.src;
+			img4.src = img5.src;
+			img5.src = tmp;
+		}
+	</script>
+</body>
+</html>
