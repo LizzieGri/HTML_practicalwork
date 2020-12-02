@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div id="wrapper">
+		<img src="http://masteroe.com/images/features/talent-icon.png" id="img1">
+		<img src="https://sun9-35.userapi.com/c9765/u77060655/a_7fcd9b1c.jpg?ava=1" id="img2">
+		<img src="https://im0-tub-ru.yandex.net/i?id=1d570f899cdc7bae82b502a11391844d&ref=rim&n=33&w=188&h=188" id="img3">
+		<img src="http://houseprint.md/wp-content/uploads/2018/06/butterfly-113.jpg" id="img4">
+		<p>
+			<input type="submit" value="Запустить карусель!" onclick="go()" id="go">
+		</p>
+	</div>
+		<script>
+		//Запускает таймер
+		function go(){
+			window.timerId = window.setInterval(timer, 1000);
+			document.getElementById('go').disabled = true;
+		} 
+		function timer(){
+			var img1 = document.getElementById('img1');
+			var img2 = document.getElementById('img2');
+			var img3 = document.getElementById('img3');
+			var tmp = img1.src;
+			img1.src = img2.src;
+			img2.src = img3.src;
+			img3.src = img4.src;
+			img4.src = tmp;
+		}
+	</script>
+</body>
+</html>
