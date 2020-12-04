@@ -1,0 +1,83 @@
+  
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+.carousel {
+position: relative;
+width: 398px;
+padding: 10px 40px;	
+}
+
+.carousel img {
+display: block;
+}
+.arrow {
+position: absolute;
+top: 60px;
+display: block;
+}
+.prev {
+left: 7px;
+}
+
+.next {
+right: 7px;
+}
+
+.gallery {
+overflow: hidden;
+}
+
+.gallery ul {
+height: 130px;
+width: 9999px;
+margin: 0;
+padding: 0;
+list-style: none;
+transition: margin-left 250ms;
+font-size: 0;
+}
+
+.gallery li {
+display: inline-block;
+}
+</style>
+</head>
+<body>
+<div id="carousel" class="carousel">
+<button class="arrow prev"><</button>
+<div class="gallery">
+<ul class="images">
+<li><img style="width: 200px; height: 100px;"src="https://avatars.mds.yandex.net/get-zen_doc/1246934/pub_5e79ed7794c1cf1552ae897d_5e79eea8b9faf4785da3db04/scale_1200" id="img1"></li>
+<li><img style="width: 200px; height: 100px;" src="https://www.nastol.com.ua/download.php?img=201411/1920x1200/nastol.com.ua-120013.jpg" id="img2"></li>
+<li><img style="width: 200px; height: 100px;" src="https://bipbap.ru/wp-content/uploads/2019/07/s1200-21.jpg" id="img3"></li>
+<li><img style="width: 200px; height: 100px;" src="https://i0.wp.com/www.wallpapers13.com/wp-content/uploads/2016/07/Beautiful-mountain-stream-waterfall-rocks-and-green-pine-forest-Yoho-National-Park-British-Columbia-Canada-Desktop-Wallpaper-HD-2560x1600.jpg?strip=info" id="img4"></li>
+<li><img style="width: 200px; height: 100px;" src="https://img5.goodfon.ru/original/1920x1200/9/df/gory-skaly-les-kanada-alberta-vodopad.jpg" id="img5"></li>
+</ul>
+</div>
+<button class="arrow next">></button>
+ </div>
+</body>
+<script>
+var list = carousel.querySelector('ul');
+var listElems = carousel.querySelectorAll('li');
+var position = 0; 
+
+carousel.querySelector('.prev').onclick = function() {
+
+position += 200 * 2;
+      
+position = Math.min(position, 0)
+list.style.marginLeft = position + 'px';
+};
+
+carousel.querySelector('.next').onclick = function() {
+position -= 200 * 2;
+position = Math.max(position, -200 * (listElems.length - 2));
+list.style.marginLeft = position + 'px';
+};
+</script>
+</body>
+</html>
+
