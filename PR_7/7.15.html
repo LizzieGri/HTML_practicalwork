@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+  
+#largeImg {
+  border: solid 1px #ccc;
+  width: 550px;
+  height: 400px;
+}
+#thumbs {
+  margin: 0;
+  padding: 0;
+}
+#thumbs a {
+  margin: 2px;
+  float: left;
+}
+
+#thumbs a:hover {
+  border: 1px solid  #FF9900;
+}
+
+#thumbs li {
+
+  list-style: none;
+}
+
+img{
+width: 100px;
+height: 100px;
+}
+</style>
+</head>
+
+<body>
+
+  <p><img id="largeImg" src="https://www.nastol.com.ua/download.php?img=201705/2560x1600/nastol.com.ua-225408.jpg"  alt="Large image"></p>
+
+  <ul id="thumbs">
+    
+    <li>
+      <a href="https://www.nastol.com.ua/download.php?img=201705/2560x1600/nastol.com.ua-225408.jpg" title="Image 2"><img src="https://www.nastol.com.ua/download.php?img=201705/2560x1600/nastol.com.ua-225408.jpg"></a>
+    </li>
+    <li>
+      <a href="https://img3.goodfon.ru/original/1920x1200/2/6c/waterfall-sea-lake-deep-546.jpg" title="Image 3"><img src="https://img3.goodfon.ru/original/1920x1200/2/6c/waterfall-sea-lake-deep-546.jpg"></a>
+    </li>
+    <li>
+      <a href="https://www.ejin.ru/wp-content/uploads/2019/05/plitvickie-ozyora-horvatija.jpg" title="Image 4"><img src="https://www.ejin.ru/wp-content/uploads/2019/05/plitvickie-ozyora-horvatija.jpg"></a>
+    </li>
+    <li>
+      <a href="http://ru.wallfon.com/walls/nature/beautiful-river-bridge-and-trees.jpg" title="Image 5"><img src="http://ru.wallfon.com/walls/nature/beautiful-river-bridge-and-trees.jpg"></a>
+    </li>
+    <li>
+      <a href="https://www.nastol.com.ua/download.php?img=201411/2560x1600/nastol.com.ua-116778.jpg" title="Image 6"><img src="https://www.nastol.com.ua/download.php?img=201411/2560x1600/nastol.com.ua-116778.jpg"></a>
+    </li>
+  </ul>
+
+  <script>
+    thumbs.onclick = function(event) {
+      let thumbnail = event.target.closest('a');
+
+      if (!thumbnail) return;
+      showThumbnail(thumbnail.href, thumbnail.title);
+      event.preventDefault();
+    }
+
+    function showThumbnail(href, title) {
+      largeImg.src = href;
+      largeImg.alt = title;
+    }
+  </script>
+
+</body>
+</html>
